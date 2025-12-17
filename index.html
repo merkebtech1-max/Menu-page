@@ -122,7 +122,7 @@
           <div>
             <h2 class="text-2xl font-semibold">Chicken</h2>
             <h2 class="text-2xl font-semibold mb-4">ዶሮ</h2>
-            <div id="chicken-list"></div>
+            <div  id="chicken-list"></div>
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@
           <div>
             <h2 class="text-2xl font-semibold">Salad</h2>
             <h2 class="text-2xl font-semibold mb-4">ሰላጣ</h2>
-            <div id="salad-list"></div>
+            <div  id="salad-list"></div>
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- Breakfast -->
           <div>
-            <div id="pizza-list"></div>
+            <div style="margin-top: 70px;" id="pizza-list"></div>
           </div>
         </div>
       </div>
@@ -289,7 +289,7 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- Breakfast -->
           <div>
-            <div id="shack-list"></div>
+            <div style="margin-top: 70px;" id="shack-list"></div>
           </div>
         </div>
       </div>
@@ -316,7 +316,7 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- Breakfast -->
           <div>
-            <div id="juice-list"></div>
+            <div style="margin-top: 70px;" id="juice-list"></div>
           </div>
         </div>
       </div>
@@ -343,15 +343,22 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- Breakfast -->
           <div>
-            <div id="hot-list"></div>
+            <div style="margin-top: 70px;" id="hot-list"></div>
           </div>
         </div>
       </div>
+      </section>
 
+      <section class="relative w-full">
+      <div class="absolute inset-0">
+        <img src="coldd.png" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
       <div class="relative z-10 pt-12 px-6 md:px-12 pb-12">
+       
         <!-- Top-right image -->
         <img
-          src="k2.png"
+          src="cold_drink.png"
           class="absolute top-0 right-0 w-64 h-40 lg:w-96 lg:h-56 object-cover rounded-bl-full shadow-md"
         />
 
@@ -362,14 +369,15 @@
         <div class="grid grid-cols-1 gap-4">
           <!-- Breakfast -->
           <div>
-            <div id="cold-list"></div>
+            
+            <div style="margin-top: 70px;" id="cold-list"></div>
           </div>
         </div>
       </div>
-
-
-
     </section>
+
+
+    
     <script>
       const breakfastfoodItems = [
         { name1: "Bean Full", name2: "ፉል", price: 120 },
@@ -404,16 +412,7 @@
         },
         { name1: "Thin Porridge", name2: "ቀጭን ገንፎ", price: 135 },
         { name1: "Specal Chechbesa", name2: " እስፔሻል ጨጨብሳ", price: 295 },
-         {
-          name1: "Bread",
-          name2: "ዳቦ",
-          price: 25,
-        },
-        {
-          name1: "Bonbolino",
-          name2: "ቦንቦሊኖ",
-          price: 40,
-        },
+         
       ];
 
       const traditionalfoodItems = [
@@ -771,6 +770,16 @@
         { name1: "Torta Cake", name2: "ቶርታ ኬክ", price: 800 },
         { name1: "Special Torta Cake", name2: "ስፔሻል ቶርታ ኬክ", price: 1000 },
        {
+          name1: "Bread",
+          name2: "ዳቦ",
+          price: 25,
+        },
+        {
+          name1: "Bonbolino",
+          name2: "ቦንቦሊኖ",
+          price: 40,
+        },
+        {
           name1: "Macaroni",
           name2: "ማካሮኒ",
           price: 135,
@@ -995,6 +1004,11 @@
           name1: "Coffee Pot",
           name2: "የጀበና ቡና",
           price: 58,
+        },
+        {
+          name1: "Cape Cape",
+          name2: "ኬፕ ኬፕ",
+          price: 50,
         },
         {
           name1: "Macchiatto",
