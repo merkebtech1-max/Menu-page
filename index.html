@@ -347,6 +347,28 @@
           </div>
         </div>
       </div>
+
+      <div class="relative z-10 pt-12 px-6 md:px-12 pb-12">
+        <!-- Top-right image -->
+        <img
+          src="k2.png"
+          class="absolute top-0 right-0 w-64 h-40 lg:w-96 lg:h-56 object-cover rounded-bl-full shadow-md"
+        />
+
+        <p class="font-bold text-4xl mt-0 mb-2">Cold Drink</p>
+
+        <p class="font-semibold text-2xl mt-0 mb-6">ቀዝቃዛ መጠጥ</p>
+
+        <div class="grid grid-cols-1 gap-4">
+          <!-- Breakfast -->
+          <div>
+            <div id="cold-list"></div>
+          </div>
+        </div>
+      </div>
+
+
+
     </section>
     <script>
       const breakfastfoodItems = [
@@ -359,10 +381,12 @@
         },
         { name1: "Fried Egg", name2: "የተጠበሰ እንቁላል", price: 175 },
         { name1: "Scrambled Egg", name2: " እንቁላል ፍርፍር", price: 185 },
-        { name1: "Specal Omelette", name2: " እስፔሻል ኦምሌት ", price: 275 },
+        { name1: "Scrambled Potato", name2: "ድንች ፍርፍር", price: 175 },
+        { name1: "Special Scrambled Potato", name2: "እስፔሻል ድንች ፍርፍር", price: 195 },
+        { name1: "Specal Omelette", name2: " እስፔሻል ኦምሌት ", price: 370 },
         { name1: "Egg With Meat", name2: " እንቁላል በስጋ ", price: 330 },
         { name1: "Cheese Omelette", name2: "  ቺዝ ኦምሌት", price: 330 },
-        { name1: "Fetira With Egg", name2: " ፈጢራ በእንቁላል", price: 265 },
+        { name1: "Fetira With Egg", name2: " ፈጢራ በእንቁላል", price: 295 },
         {
           name1: "Fetira With Egg by honey Butter",
           name2: " ፈጢራ በእንቁላል በማር ቅቤ ",
@@ -372,7 +396,11 @@
         { name1: "Chechebsa With Honey", name2: "ጨጨብሳ በማር ", price: 180 },
         { name1: "Chechebsa With Egg", name2: " ጨጨብሳ እንቁላል", price: 245 },
         { name1: "Chechebsa With Butter", name2: " ጨጨብሳ በቅቤ", price: 235 },
+        { name1: "Cake", name2: "ኬክ", price: 70 },
+        { name1: "Cream Cake", name2: "ክሬም ኬክ", price: 70 },
         { name1: "Pan Cake", name2: "የመጥበሻ ኬክ", price: 135 },
+        { name1: "Torta Cake", name2: "ቶርታ ኬክ", price: 800 },
+        { name1: "Special Torta Cake", name2: "ስፔሻል ቶርታ ኬክ", price: 1000 },
         {
           name1: "Egg with Twasted Bread",
           name2: " እንቁላል ከተጠበሰ ዳቦ ጋር",
@@ -390,17 +418,22 @@
           name2: " እስፔሻል ቋንጣ ፍርፍር",
           price: 360,
         },
+        {
+          name1: " Specal Meat Firfir",
+          name2: " እስፔሻል ስጋ ፍርፍር",
+          price: 330,
+        },
         { name1: "Lumb Tips", name2: "የበግ ጥብስ", price: 410 },
         { name1: "Lumb Tips Firfir", name2: "የበግ ጥብስ ፍርፍር", price: 395 },
         {
           name1: "Specal Full Scrambled",
           name2: "የቤቱ እስፔሻል ሙሉ ፍርፍር",
-          price: 700,
+          price: 790,
         },
         {
           name1: "Specal Half Scrambled",
           name2: "የቤቱ እስፔሻል ግማሽ ፍርፍር",
-          price: 400,
+          price: 450,
         },
         { name1: "Shro With tuna", name2: "ሽሮ በቱና", price: 180 },
         {
@@ -416,29 +449,39 @@
         {
           name1: " Shro Tegabino",
           name2: " ሽሮ ተጋቢኖ",
+          price: 175,
+        },
+        {
+          name1: " Shro Lala",
+          name2: " ሽሮ ላላ",
           price: 155,
+        },
+        {
+          name1: " Shro Bozenna",
+          name2: " ሽሮ ቦዘና",
+          price: 275,
         },
         { name1: "Fasting Scrambled", name2: "የዖምፍርፍር", price: 145 },
         { name1: "Cooked Vegitable", name2: "የበሰለ አትክልት", price: 270 },
         {
           name1: "Shro Fesse",
           name2: " ሽሮ ፈሰስ",
-          price: 120,
+          price: 140,
         },
         {
           name1: "Specal Fasting Full Scrambled",
           name2: " የዖም እስፔሻል ፍርፍር",
-          price: 480,
+          price: 560,
         },
         {
           name1: "Specal Fasting half Scrambled",
           name2: "የዖም እስፔሻል ግማሽ ፍርፍር",
-          price: 280,
+          price: 340,
         },
         {
           name1: "Sunflower Scrambled",
           name2: "የሱፍ ፍትፍት ",
-          price: 120,
+          price: 180,
         },
       ];
       const chickenItem = [
@@ -463,12 +506,12 @@
         {
           name1: "Full  Roasted Chicken",
           name2: " የዶሮ አሮስቶ ሙሉ",
-          price: 1200,
+          price: 1600,
         },
         {
           name1: "Half Roasted Chicken",
           name2: "የዶሮ አሮስቶ ግማሽ",
-          price: 600,
+          price: 800,
         },
         {
           name1: "Chicken Cariv With Rice",
@@ -591,7 +634,7 @@
         {
           name1: "Avocado Salad ",
           name2: "አቮካዶ ሰላጣ",
-          price: 280,
+          price: 380,
         },
         {
           name1: "Tomato Salad",
@@ -606,7 +649,7 @@
         {
           name1: "Cooked Vegitable salad",
           name2: "የበሰለ የአትክልት ሰላጣ",
-          price: 270,
+          price: 210,
         },
         {
           name1: "Tuna Salad",
@@ -618,7 +661,7 @@
         {
           name1: "Spaghetti With Vegitable",
           name2: "ፓስታ ከአትክልት ጋር",
-          price: 175,
+          price: 195,
         },
         {
           name1: "Spaghetti  With Tomato Sauce",
@@ -719,12 +762,32 @@
           name2: "ማካሮኒ",
           price: 135,
         },
+        {
+          name1: "Mekoreni Tomato Sauce",
+          name2: " መኮረኒ በቲማቲም ስልስ",
+          price: 165,
+        },
+        {
+          name1: "Bread",
+          name2: "ዳቦ",
+          price: 25,
+        },
+        {
+          name1: "Bonbolino",
+          name2: "ቦንቦሊኖ",
+          price: 40,
+        },
       ];
       const pizzaItem = [
         {
           name1: "Specal Pizza",
           name2: "የቤቱ እስፔሻል ፒዛ",
           price: 580,
+        },
+        {
+          name1: "Mini Specal Pizza",
+          name2: "ሚኒ እስፔሻል ፒዛ",
+          price: 280,
         },
         {
           name1: "Margarita Pizza",
@@ -750,7 +813,7 @@
         {
           name1: "For Season Pizza",
           name2: "ፎር ሲዝን ፒዛ ",
-          price: 460,
+          price: 485,
         },
         {
           name1: "Meat Laver Pizza",
@@ -765,7 +828,7 @@
         {
           name1: "Fruit Zone Pizza",
           name2: "የፍስክ ፍሩት ዞን ፒዛ",
-          price: 450,
+          price: 480,
         },
         {
           name1: "Fasting Tuna Pizza",
@@ -911,20 +974,24 @@
       ];
       const hotItem = [
         {
-          name1: "Sprice Tea",
-          name2: "ስፕሩስ ሻይ",
-          price: 58,
+          name1: "spruce Tea",
+          name2: "ስፕሪስ ሻይ",
+          price: 50,
         },
         {
           name1: "Tea",
           name2: "ሻይ",
           price: 50,
         },
-
         {
           name1: "Coffee",
           name2: "ቡና",
-          price: 65,
+          price: 75,
+        },
+        {
+          name1: "Coffee Pot",
+          name2: "የጀበና ቡና",
+          price: 58,
         },
         {
           name1: "Macchiatto",
@@ -932,8 +999,33 @@
           price: 65,
         },
         {
+          name1: "Double Macchiatto",
+          name2: "ድብል ማኪያቶ",
+          price: 138,
+        },
+        {
+          name1: "Fasting Double Macchiatto",
+          name2: "ድብል የጾም ማኪያቶ",
+          price: 130,
+        },
+        {
+          name1: "Caramel Macchiatto",
+          name2: "ካራሜል ማኪያቶ",
+          price: 140,
+        },
+        {
+          name1: "Fasting Macchiatto",
+          name2: "የጾም ማኪያቶ",
+          price: 83,
+        },
+        {
           name1: "Cappuccino",
           name2: " ካፑቺኖ",
+          price: 90,
+        },
+        {
+          name1: "Fasting Cappuccino",
+          name2: "የጾም ካፑቺኖ",
           price: 90,
         },
         {
@@ -947,9 +1039,29 @@
           price: 78,
         },
         {
+          name1: "Milk With Honey",
+          name2: "ወተት በ ማር",
+          price: 98,
+        },
+        {
+          name1: "Milk with Onion",
+          name2: "ወተት በ ሽንኩርት",
+          price: 98,
+        },
+        {
           name1: "Fruit Tea",
           name2: "ፍሩት ሻይ ",
           price: 105,
+        },
+        {
+          name1: "Lemon Tea",
+          name2: "የሎሚ ሻይ",
+          price: 58,
+        },
+        {
+          name1: "Tea Bag",
+          name2: " ቲ ባግ ",
+          price: 55,
         },
         {
           name1: "Specal Tea ",
@@ -957,14 +1069,56 @@
           price: 123,
         },
         {
-          name1: "Karamel Macchiato",
-          name2: "ካራሜል ማኪያቶ",
-          price: 98,
-        },
-        {
           name1: "Keshir",
           name2: "ቀሽር",
           price: 63,
+        },
+        {
+          name1: "Keshir With Honey",
+          name2: "ቀሽር በ ማር",
+          price: 98,
+        },
+      ];
+      const coldItem = [
+        {
+          name1: "coca cola",
+          name2: "ኮካ ኮላ",
+          price: 57,
+        },
+        {
+          name1: "Leslasa",
+          name2: "ለስላሳ",
+          price: 57,
+        },
+        {
+          name1: " Daily Water 0.330ml",
+          name2: "ዴሊ ውሃ 0.330ሚ.ሊ",
+          price: 28,  
+        },
+        {
+          name1: " 0.5L Water",
+          name2: "ውሃ 0.5ሊ",
+          price: 30,
+        },
+        {
+          name1: "Ambo Mineral Water",
+          name2: "አምቦ ማይነራል ውሃ",
+          price: 43,
+        },
+        {
+          name1: "Royal Tonic",
+          name2: "ሮያል ቶኒክ",
+          price: 55,
+        },
+        {
+          name1:"water 1.5L",
+          name2: "ውሃ 1.5ሊ",
+          price: 42,
+        },
+        {
+          name1:"Water 2L",
+          name2: "ውሃ 2ሊ",
+          price: 48,
         },
       ];
       function renderMenuItems(items, containerId) {
@@ -999,6 +1153,7 @@
       renderMenuItems(shackItem, "shack-list");
       renderMenuItems(juiceItem, "juice-list");
       renderMenuItems(hotItem, "hot-list");
+      renderMenuItems(coldItem, "cold-list");
     </script>
   </body>
 </html>
